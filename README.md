@@ -1,2 +1,1 @@
-# learning-go-with-tests
-Test-driven exercises from "Learn Go with Tests".
+Test-driven exercises from _[Learn Go with Tests](https://quii.gitbook.io/learn-go-with-tests)_.
