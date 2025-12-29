@@ -3,11 +3,17 @@ package main
 import "testing"
 
 func TestHello(t *testing.T) {
-	t.Run("saying hello to people", func(t *testing.T) {
-		assertCorrectMessage(t, Hello("Noah"), "Hello, Noah")
+	t.Run("hello defaults", func(t *testing.T) {
+		assertCorrectMessage(t, Hello("", ""), "Hello, world")
 	})
-	t.Run("empty string defaults to 'world'", func(t *testing.T) {
-		assertCorrectMessage(t, Hello(""), "Hello, world")
+	t.Run("hello in English", func(t *testing.T) {
+		assertCorrectMessage(t, Hello("Noah", "English"), "Hello, Noah")
+	})
+	t.Run("hello in Spanish", func(t *testing.T) {
+		assertCorrectMessage(t, Hello("Noah", "Spanish"), "Hola, Noah")
+	})
+	t.Run("hello in French", func(t *testing.T) {
+		assertCorrectMessage(t, Hello("Noah", "French"), "Bonjour, Noah")
 	})
 }
 
